@@ -14,7 +14,7 @@ export default function Home(){
             <section className='h-[100dvh] relative'>
 
                     <div className=' h-full w-full flex items-center justify-center flex-col gap-32'>
-                        <div className='text-center'>
+                        <div className='text-center text-black'>
                             <h1 className='text-4xl font-bold font-serif sm:text-5xl'>Calc&Click</h1>
                             <p className='text-2xl sm:text-3xl'>Resultados na ponta dos dedos!</p>
                         </div>

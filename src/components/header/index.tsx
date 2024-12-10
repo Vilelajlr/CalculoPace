@@ -16,7 +16,7 @@ export function Header() {
         <header className="w-full h-[10dvh] z-50 fixed top-0">
             <div className="w-full max-w-[1440px] h-full mx-auto flex items-center justify-between px-5">
                 <div>
-                    <Link href="/" className="text-3xl font-serif font-bold">
+                    <Link href="/" className="text-3xl text-black font-serif font-bold">
                         Calc&Click
                     </Link>
                 </div>
@@ -36,7 +36,7 @@ export function Header() {
                             <li key={link.url}>
                                 <Link
                                     href={link.url}
-                                    className="hover:text-blue-500 transition-colors"
+                                    className="hover:text-blue-500 transition-colors text-black"
                                 >
                                     {link.name}
                                 </Link>

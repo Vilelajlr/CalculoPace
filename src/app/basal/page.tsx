@@ -39,7 +39,7 @@ export default function Tmb() {
                         <h1 className="text-2xl font-bold pb-10 text-center">Calcular TMB</h1>
 
                         <form
-                            className="flex flex-col max-w-[365px] border border-gray-500 p-10 rounded-md items-center justify-center bg-gray-100 gap-5"
+                            className="flex flex-col max-w-[365px] border border-gray-500 p-10 rounded-md items-center justify-center bg-gray-100 gap-5 text-black"
                             onSubmit={(e) => {
                                 e.preventDefault();
                                 handleCalculo();
@@ -71,7 +71,7 @@ export default function Tmb() {
                                     value={idade}
                                 />
                                 <div className="flex gap-4">
-                                    <label>
+                                    <label className="flex items-center justify-center gap-2">
                                         <input
                                             type="radio"
                                             name="sexo"
@@ -81,7 +81,7 @@ export default function Tmb() {
                                         />
                                         Masculino
                                     </label>
-                                    <label>
+                                    <label className="flex items-center justify-center gap-2">
                                         <input
                                             type="radio"
                                             name="sexo"
@@ -102,7 +102,7 @@ export default function Tmb() {
                         </form>
 
                         {resultado && (
-                            <div className=" max-w-[365px] mt-5 border border-green-400 bg-green-300 p-10 rounded-md">
+                            <div className=" max-w-[365px] mt-5 border border-green-400 bg-green-300 p-10 rounded-md text-black">
                                 <p><strong>Peso: </strong>{peso} kg</p>
                                 <p><strong>Altura: </strong>{altura} cm</p>
                                 <p><strong>Idade: </strong>{idade} anos</p>

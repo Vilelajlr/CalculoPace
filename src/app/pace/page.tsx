@@ -40,9 +40,9 @@ export default function Pace() {
     }
 
     return (
-        <section className="w-full h-full pt-32 flex items-center justify-center">
+        <section className="w-full h-[100dvh] flex items-center justify-center">
             <div className="flex flex-col items-center justify-center p-10">
-                <h1 className="text-2xl font-bold pb-10 text-center">Calcular tempo total e velocidade Média (km/h)</h1>
+                <h1 className="text-2xl font-bold pb-10 text-center text-black">Calcular tempo total e velocidade Média (km/h)</h1>
 
                 <form
                     className="flex flex-col max-w-[300px] border border-gray-500 p-10 rounded-md items-center justify-center bg-gray-100 gap-5"
@@ -51,12 +51,12 @@ export default function Pace() {
                         calcular();
                     }}
                 >
-                    <div className="flex flex-col">
+                    <div className="flex flex-col text-black">
                         <p>Distancia (km)</p>
                         <Input type="text" name="km" placeholder="Km" onChange={(e) => setKm(e.target.value)} value={km} />
                     </div>
 
-                    <div className="flex flex-col">
+                    <div className="flex flex-col text-black">
                         <p>Pace</p>
                         <div className="flex gap-2 w-full">
                             <Input type="text" name="paceMin" placeholder="MIN" onChange={(e) => setPaceMin(e.target.value)} value={paceMin} />
@@ -71,7 +71,7 @@ export default function Pace() {
 
                 {/* Resultados */}
                 {tempoTotal && (
-                    <div className="mt-5 border border-green-400 bg-green-300 p-10 rounded-md">
+                    <div className="mt-5 border border-green-400 bg-green-300 p-10 rounded-md text-black">
                         <p><strong>Pace:</strong> {paceMin}'{paceSeg}</p>
                         <p><strong>Km feito:</strong> {km} km</p>
                         <p><strong>Tempo Total:</strong> {tempoTotal}</p>

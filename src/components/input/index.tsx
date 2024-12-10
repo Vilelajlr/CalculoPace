@@ -17,7 +17,7 @@ export function Input({type, name, placeholder, onChange, value}: InputProps){
             placeholder={placeholder}
             onChange={onChange}
             value={value}
-            className="border border-gray-300 p-2 outline-none rounded-md w-full"
+            className="border border-gray-300 p-2 outline-none rounded-md w-full bg-white active:"
         />
     )
 }

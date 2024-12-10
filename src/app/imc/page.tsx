@@ -42,10 +42,10 @@ export default function Imc() {
             <section className="h-[100dvh] relative pt-32">
                 <div className="w-full max-w-[1440px] mx-auto flex items-center justify-center">
                     <div>
-                        <h1 className="text-2xl font-bold pb-10 text-center">Calcular IMC</h1>
+                        <h1 className="text-2xl font-bold pb-10 text-center text-black">Calcular IMC</h1>
 
                         <form
-                            className="flex flex-col max-w-[365px] border border-gray-500 p-10 rounded-md items-center justify-center bg-gray-100 gap-5 sm:max-w-[400px]"
+                            className=" text-black font-bold flex flex-col max-w-[365px] border border-gray-500 p-10 rounded-md items-center justify-center bg-gray-100 gap-5 sm:max-w-[400px]"
                             onSubmit={(e) => {
                                 e.preventDefault();
                                 handleCalculo();
@@ -79,7 +79,7 @@ export default function Imc() {
                         </form>
 
                         {resultado && (
-                            <div className="mt-5 border border-green-400 bg-green-300 p-10 rounded-md">
+                            <div className="mt-5 border border-green-400 bg-green-300 p-10 rounded-md text-black">
                                 <p><strong>Peso: </strong>{peso} kg</p>
                                 <p><strong>Altura: </strong>{altura} cm</p>
                                 <p><strong>{resultado}</strong></p>

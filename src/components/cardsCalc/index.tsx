@@ -7,27 +7,30 @@ import { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 export interface CardsCalcProps {
     name: string;
     img: string | StaticImageData;
+    description: string;
     url: string;
 }
 
 
 
-export function CardsCalc({name, img, url}: CardsCalcProps){
+export function CardsCalc({name, img, url, description}: CardsCalcProps){
     return(
       
             
-        <Link href={url} >
-
-            <div className="w-[200px] h-[190px] border border-solid border-black p-10 sm:w-[380px] sm:h-[290px]">
-                <div>
-                    <Image src={img} alt={name} objectFit="cover"/>
-                </div>
-                <div className="text-center text-3xl font-bold mt-5">
-                    <h3>{name}</h3>
-                </div>
+        <div className="card bg-base-100 image-full w-96 shadow-xl">
+        <figure>
+            <Image
+            src={img}
+            alt={name} />
+        </figure>
+        <div className="card-body">
+            <h2 className="card-title">{name}"</h2>
+            <p>{description}</p>
+            <div className="card-actions justify-end">
+            <Link href={url} className="btn btn-primary">Acesse</Link>
             </div>
-            
-        </Link>
+        </div>
+        </div>
            
     )
 }
