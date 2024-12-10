@@ -1,6 +1,9 @@
+'use client';
+
+import { Input } from "@/components/input";
 import { useState } from "react";
 
-export function Calculo() {
+export default function Pace() {
     const [km, setKm] = useState('');
     const [paceMin, setPaceMin] = useState('');
     const [paceSeg, setPaceSeg] = useState('');
@@ -18,13 +21,11 @@ export function Calculo() {
             return;
         }
 
-        // Converter pace para minutos decimais
         const paceTotalMin = paceMinutos + paceSegundos / 60;
 
-        // Calcular tempo total em minutos
         const tempoTotalMin = distancia * paceTotalMin;
 
-        // Converter tempo total para formato horas:minutos:segundos
+
         const horas = Math.floor(tempoTotalMin / 60);
         const minutos = Math.floor(tempoTotalMin % 60);
         const segundos = Math.round((tempoTotalMin % 1) * 60);
@@ -39,7 +40,7 @@ export function Calculo() {
     }
 
     return (
-        <section className="w-full h-full flex items-center justify-center">
+        <section className="w-full h-full pt-32 flex items-center justify-center">
             <div className="flex flex-col items-center justify-center p-10">
                 <h1 className="text-2xl font-bold pb-10 text-center">Calcular tempo total e velocidade Média (km/h)</h1>
 
@@ -52,32 +53,14 @@ export function Calculo() {
                 >
                     <div className="flex flex-col">
                         <p>Distancia (km)</p>
-                        <input
-                            type="text"
-                            placeholder="KM"
-                            onChange={(e) => setKm(e.target.value)}
-                            value={km}
-                            className="border border-gray-300 p-2 outline-none rounded-md w-full"
-                        />
+                        <Input type="text" name="km" placeholder="Km" onChange={(e) => setKm(e.target.value)} value={km} />
                     </div>
 
                     <div className="flex flex-col">
                         <p>Pace</p>
                         <div className="flex gap-2 w-full">
-                            <input
-                                type="text"
-                                placeholder="MIN"
-                                className="border border-gray-300 p-2 outline-none rounded-md w-full"
-                                onChange={(e) => setPaceMin(e.target.value)}
-                                value={paceMin}
-                            />
-                            <input
-                                type="text"
-                                placeholder="SEG"
-                                className="border border-gray-300 p-2 outline-none rounded-md w-full"
-                                onChange={(e) => setPaceSeg(e.target.value)}
-                                value={paceSeg}
-                            />
+                            <Input type="text" name="paceMin" placeholder="MIN" onChange={(e) => setPaceMin(e.target.value)} value={paceMin} />
+                            <Input type="text" name="paceSeg" placeholder="SEG" onChange={(e) => setPaceSeg(e.target.value)} value={paceSeg} />
                         </div>
                     </div>
 
