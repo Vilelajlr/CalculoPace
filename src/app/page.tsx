@@ -13,7 +13,7 @@ export default function Home(){
         <main className="min-h-[100dvh] ">
             <section className='h-[100dvh] relative'>
 
-                    <div className='absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] w-full'>
+                    <div className=' h-full w-full flex items-center justify-center flex-col gap-32'>
                         <div className='text-center'>
                             <h1 className='text-4xl font-bold font-serif sm:text-5xl'>Calc&Click</h1>
                             <p className='text-2xl sm:text-3xl'>Resultados na ponta dos dedos!</p>
@@ -21,9 +21,9 @@ export default function Home(){
 
 
 
-                        <div className='text-center mt-32'>
-                            <Link href="/calc" className='py-3 px-2 bg-[#273036] rounded-md text-white font-bold'>Explore as calculadoras disponiveis</Link>
-                        </div>
+                        
+                        <Link href="/calc" className='py-3 px-2 bg-[#273036] rounded-md text-white font-bold z-10'>Explore as calculadoras disponiveis</Link>
+                        
                     </div>
 
 

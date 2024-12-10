@@ -102,7 +102,7 @@ export default function Tmb() {
                         </form>
 
                         {resultado && (
-                            <div className=" max-w-[400px] mt-5 border border-green-400 bg-green-300 p-10 rounded-md">
+                            <div className=" max-w-[365px] mt-5 border border-green-400 bg-green-300 p-10 rounded-md">
                                 <p><strong>Peso: </strong>{peso} kg</p>
                                 <p><strong>Altura: </strong>{altura} cm</p>
                                 <p><strong>Idade: </strong>{idade} anos</p>
